@@ -18,3 +18,5 @@ jobs:
           java-version: 14
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+      - name: Static code analysis
+        run: mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar

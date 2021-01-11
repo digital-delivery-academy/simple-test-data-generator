@@ -17,6 +17,9 @@
         <restassured.version>4.3.0</restassured.version>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
         <maven.surefire.version>2.22.2</maven.surefire.version>
+        <sonar.projectKey>digital-delivery-academy_simple-test-data-generator</sonar.projectKey>
+        <sonar.organization>digital-delivery-academy</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <repositories>
