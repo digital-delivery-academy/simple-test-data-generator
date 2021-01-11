@@ -20,3 +20,5 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Static code analysis
         run: mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+          with:
+            repo-token: ${{ secrets.GITHUB_TOKEN }}
