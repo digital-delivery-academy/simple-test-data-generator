@@ -11,6 +11,8 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BankHolidays {
 
+    private static final String EVENT_NODE = "events";
+
     private Locale locale;
     private List<BankHoliday> englandAndWalesBankHolidays;
     private List<BankHoliday> scotlandBankHolidays;
@@ -26,18 +28,18 @@ public class BankHolidays {
 
     @JsonProperty("england-and-wales")
     public void setEnglandAndWalesHolidays(JsonNode jsonNode) throws JsonProcessingException {
-        this.englandAndWalesBankHolidays = JsonUtils.fromString(jsonNode.get("events").toString(), new TypeReference<>() {
+        this.englandAndWalesBankHolidays = JsonUtils.fromString(jsonNode.get(EVENT_NODE).toString(), new TypeReference<>() {
         });
     }
 
     @JsonProperty("scotland")
     public void scotlandHolidays(JsonNode jsonNode) throws JsonProcessingException {
-        this.scotlandBankHolidays = JsonUtils.fromString(jsonNode.get("events").toString(), new TypeReference<>() {});
+        this.scotlandBankHolidays = JsonUtils.fromString(jsonNode.get(EVENT_NODE).toString(), new TypeReference<>() {});
     }
 
     @JsonProperty("northern-ireland")
     public void northernIrelandHolidays(JsonNode jsonNode) throws JsonProcessingException {
-        this.northernIrelandBankHolidays = JsonUtils.fromString(jsonNode.get("events").toString(), new TypeReference<>() {});
+        this.northernIrelandBankHolidays = JsonUtils.fromString(jsonNode.get(EVENT_NODE).toString(), new TypeReference<>() {});
     }
 
     public List<BankHoliday> get(Locale locale) {

@@ -31,9 +31,23 @@ public class DatesTests {
     }
 
     @Test
-    public void testCanGetDateInFutureAvoidingWeekendsAndBankHolidays() throws IOException {
+    public void testCanGetDateInFutureAvoidingWeekendsAndBankHolidaysEnglandWales() throws IOException {
         assertThat(futureDataAvoidingWeekendsAndBankHolidays(
                 Locale.ENGLAND_AND_WALES, "28/08/2017", 2, "dd/MM/yyyy"),
+                is("31/08/2017"));
+    }
+
+    @Test
+    public void testCanGetDateInFutureAvoidingWeekendsAndBankHolidaysScotland() throws IOException {
+        assertThat(futureDataAvoidingWeekendsAndBankHolidays(
+                Locale.SCOTLAND, "28/08/2017", 2, "dd/MM/yyyy"),
+                is("30/08/2017"));
+    }
+
+    @Test
+    public void testCanGetDateInFutureAvoidingWeekendsAndBankHolidaysNorthernIreland() throws IOException {
+        assertThat(futureDataAvoidingWeekendsAndBankHolidays(
+                Locale.NORTHERN_IRELAND, "28/08/2017", 2, "dd/MM/yyyy"),
                 is("31/08/2017"));
     }
 
