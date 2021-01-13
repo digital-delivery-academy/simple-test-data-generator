@@ -1,10 +1,12 @@
 package utils;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import org.junit.jupiter.api.Test;
 import uk.co.evoco.utils.JsonUtils;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -18,6 +20,14 @@ public class JsonUtilsTests {
     public void testFromFileWithTestClass() throws IOException {
         File file = loadFile(FILE);
         TestObject testObject = JsonUtils.fromFile(file, TestObject.class);
+        assertThat(testObject.getField1(), is("test1"));
+    }
+
+    @Test
+    public void testFromFileWithTestTypeReference() throws IOException {
+        File file = loadFile(FILE);
+        TestObject testObject = JsonUtils.fromFile(file, new TypeReference<>() {
+        });
         assertThat(testObject.getField1(), is("test1"));
     }
 
