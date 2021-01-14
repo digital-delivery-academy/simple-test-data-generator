@@ -1,0 +1,51 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "akwanashie",
+      "name": "Augustine K",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4432756?v=4",
+      "profile": "https://github.com/akwanashie",
+       "contributions": [
+        "code"
+      ]
+      },
+      {
+      "login": "balu836",
+      "name": "balu836",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33576087?v=4",
+      "profile": "https://github.com/balu836",
+      "contributions": [
+        "code"
+      ]
+      },
+      {
+      "login": "stevewalton28",
+      "name": "Steve Walton",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/8415117?v=4",
+      "profile": "https://www.evoco.co.uk",
+      "contributions": [
+        "code"
+      ]
+      },
+      {
+      "login": "kurt-uk",
+      "name": "Kurt P",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26488566?v=4",
+      "profile": "https://github.com/kurt-uk",
+      "contributions": [
+        "code"
+        ]
+       }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "simple-test-data-generator",
+  "projectOwner": "digital-delivery-academy",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
